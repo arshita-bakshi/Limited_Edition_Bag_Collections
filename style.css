@@ -1,0 +1,222 @@
+/* General Styling */
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #F5F3EE;
+  color: #3a2d2d;
+  margin: 0;
+  padding: 0;
+  padding-top: 70px; /* to accommodate fixed header */
+}
+#analysis input[type="file"],
+#analysis button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #e4b7c4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Fixed Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #001F3F;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo Left */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* Name Centered */
+.site-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Three Dots Right */
+.dots {
+  font-size: 28px;
+  color: #FFFFFF;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 30px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown a:hover {
+  background-color: #684b25;
+}
+
+/* Navigation Links (for desktop layouts) */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #eccaff;
+}
+
+/* Main Content Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+/* Collection Grid */
+.obj-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.obj {
+  display: flex;
+  align-items: center;
+  background: #fffdf5;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  text-align: left;
+  box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.obj:hover {
+  transform: scale(1.05);
+}
+
+/* Collection Images */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bag-image {
+  width: 220px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.clip-image {
+  width: 180px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+#contact {
+  padding: 100px 20px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Form */
+.contact-form {
+  background: #fffdf5;
+  padding: 50px;
+  border-radius: 15px;
+  width: 60%;
+  margin: 20px auto;
+  text-align: left;
+  box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* Call-to-Action Button */
+.cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #A68949;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid #4a2a20;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.cta:hover {
+  background-color: #fec5ff;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2.2em;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+
+  #contact {
+    padding: 80px 20px;
+    min-height: 600px;
+  }
+
+  .bag-image {
+    width: 180px;
+  }
+
+  .clip-image {
+    width: 150px;
+  }
+}

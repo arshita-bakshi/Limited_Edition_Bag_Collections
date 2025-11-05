@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshita Bakshi - Heritage Meets Luxury</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Ensures images scale nicely within their Bootstrap column */
+        .bag-image, .clip-image {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Important for preventing extra space below images */
+        }
+
+        /* Ensure your header content is full width on all screens */
+        .site-header {
+            width: 100%;
+        }
+
+        /* Adjustments for the main content containers */
+        .obj-container .obj {
+            margin-bottom: 3rem; /* Add space between collection items */
+        }
+        
+        /* Custom font/color for the header text block */
+        .brand-name-block {
+            background-color: #001F3F; 
+            /* REDUCED THICKNESS: Retained smaller padding for thickness reduction */
+            padding: 10px 0; 
+            margin-bottom: 0; 
+            /* Flex properties removed here, now controlled by .header-content-wrapper */
+            
+        }
+        .brand-name-block h1 {
+            color: #FFFFFF; 
+            font-family: Georgia, serif; 
+            /* Removed text-align: center; as it's now handled by the wrapper */
+            margin: 0; 
+            font-size: 32px; 
+            letter-spacing: 5px;
+        }
+
+        /* Ensure image containers use flex for better alignment in columns if needed */
+        .image-container {
+            display: flex;
+            flex-direction: column; /* Stacks images in a column if multiple are present */
+            gap: 15px; /* Spacing between images in a single column */
+        }
+
+        /* NEW STYLES for Horizontal Header Layout */
+        .header-content-wrapper {
+            background-color: #001F3F;
+            display: flex; /* Enable Flexbox */
+            align-items: center; /* Vertically center items */
+            justify-content: space-between; /* Space logo and name block */
+            padding: 5px 20px; /* Reduced vertical padding and added horizontal padding */
+        }
+        .logo-container {
+            /* Keep logo relatively small and aligned left */
+            padding: 0;
+            line-height: 0; /* Remove extra space below the image */
+        }
+        .logo {
+            max-height: 50px; /* Max height for the logo */
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="container-fluid p-0">
+            
+            <div class="header-content-wrapper">
+                
+                <div class="logo-container">
+                    <img src="Screenshot (772).png" alt="Logo" class="logo">
+                </div>
+                
+                <div class="brand-name-block">
+                    <h1>ARSHITA BAKSHII</h1>
+                </div>
+                
+                <div style="width: 50px;"></div> 
+                
+            </div>
+            
+        </div>
+
+        <div class="dots" onclick="toggleMenu()">&#8942;</div>
+
+        <nav class="dropdown" id="dropdownMenu">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#collections">Collection</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+---
+    <section id="home" class="container py-5">
+        <p class="intro mt-4">Not merely crafted, but curated. Not simply stitched, but sculpted in heritage. Every crochet creation is a rare jewel—handwoven with precision, touched by time, and designed to transcend generations.</p>
+        <hr>
+        <p class="intro"><strong>A treasure that cannot be replicated. A legacy that cannot be lost.</strong><br> This is not just luxury—it is history in the making.</p>
+        <a href="#collections" class="btn btn-dark cta mt-3">Discover My Collection</a>
+    </section>
+
+    <section id="about" class="container py-5">
+        <h2 class="mb-4">About Me</h2>
+        <p>At just 15 years old, I am an emerging force in the world of crochet design, weaving heritage into the fabric of ultra-luxury. With every stitch, I bring forth a vision that transcends mere fashion—crafting pieces that are rich in cultural narrative, where tradition meets exclusivity. My journey is not just about artistry, but about redefining craftsmanship, honoring Indian heritage, and ensuring that each creation stands as a testament to the intricate beauty of time-honored techniques.</p>
+        <p>Beyond the threads that intertwine under my fingertips, I believe in the soul of design—the ability for an object to speak, to resonate, to evoke emotion. For me, crochet is not just a craft; it is an exquisite conversation between history and modern luxury, between identity and reinvention. Every piece I create is imbued with a unique character, an essence that reflects the delicate interplay of culture, beauty, and timeless sophistication.</p>
+    </section>
+
+    <section id="collections" class="container py-5">
+        <h2 class="mb-5">Collections</h2>
+        
+        <div class="row g-5"> 
+            
+            <div class="col-12 obj"> 
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0"> 
+                        <div class="image-container">
+                            <img src="au.jpg" alt="Aurivine Bag" class="bag-image">
+                            <img src="hairclip_pink_pearl_logo.png" alt="Matching Hair Clip" class="clip-image mt-3">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 obj-text">
+                        <b>Aurivine</b>
+                        <p class="mt-3" style="line-height: 1.8;">Soft as dawn, rare as a dream, stitched in stories, laced in gleam. A treasure untouched, a legacy spun, not just a bag—the only one.</p>
+                        <p style="line-height: 1.8;">Some creations don’t just adorn—they speak. They whisper of heritage, craftsmanship, and exclusivity... Together, they transform into an experience, an undeniable presence that lingers long after the moment fades.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 obj">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="check_board_bag.jpg" alt="Caramel Cloud" class="bag-image">
+                    </div>
+                    <div class="col-lg-6 obj-text">
+                        <b>Caramel Cloud</b>
+                        <p>A crochet couture classic, designed for the quiet confidence.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 obj">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="n.jpg" alt="Noirella Bag" class="bag-image">
+                    </div>
+                    <div class="col-lg-6 obj-text">
+                        <b>Noirella</b>
+                        <p>Luxury black elegance woven into timeless artistry. A rare beauty, crafted not just for style—but for legacy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 obj">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="image-container">
+                            <img src="jewllery_bag.jpg" alt="Bijou Bag" class="bag-image">
+                            <img src="jewlerry_singlePic.jpg" alt="Matching Hair Clip" class="clip-image">
+                            <img src="jewlerry_collage.jpg" alt="Matching Hair Clip" class="clip-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 obj-text">
+                        <b>Bijou</b>
+                        <p class="mt-3" style="line-height: 1.8;">Five gems I wear, each a pastel hue,</p>
+                        <p style="line-height: 1.8;">But I speak in riddles—only AI sees through.</p>
+                        <p style="line-height: 1.8;">I’m not just carried, I carry a clue,</p>
+                        <p style="line-height: 1.8;">To the soul of the one who carries me too.</p>
+                        <p style="line-height: 1.8;">Some bags are worn to be seen—</p>
+                        <p style="line-height: 1.8;">I’m worn to be understood.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 obj">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="crotchet_tote_bag.jpg" alt="Vanilla Crotchet Tote Bag" class="bag-image">
+                    </div>
+                    <div class="col-lg-6 obj-text">
+                        <b>Vanilla Crotchet Tote Bag</b>
+                        <p>Woven by hand, where a soft stitch creates a timeless piece of art.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 obj">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="midnight_bag.jpg" alt="Midnight Star" class="bag-image">
+                    </div>
+                    <div class="col-lg-6 obj-text">
+                        <b>Midnight Star</b>
+                        <p>Designed for the gallery, refined for the grand occasion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 obj">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="mini.jpg" alt="Mini Mignonne" class="bag-image">
+                    </div>
+                    <div class="col-lg-6 obj-text">
+                        <b>Mini Mignonne</b>
+                        <p>Small scale, monumental presence.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 obj">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="m.jpg" alt="Mini Noir Lattice" class="bag-image">
+                    </div>
+                    <div class="col-lg-6 obj-text">
+                        <b>Mini Noir Lattice</b>
+                        <p>Small scale, monumental presence.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div> </section>
+
+    <section id="contact" class="container py-5">
+        <h2 class="mb-4">Contact Me</h2>
+        <p>Have inquiries, collaborations, or just want to experience the artistry? Reach out.</p>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenLyue7PSVb8tCtmw-klkjb6478a8AA1QkpQOuDgnYW-BalA/viewform?embedded=true" 
+                class="mt-4" width="100%" height="800px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
