@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshita Bakshi - Heritage Meets Luxury</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Ensures images scale nicely within their Bootstrap column */
+        .bag-image, .clip-image {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Important for preventing extra space below images */
+        }
+
+        /* Ensure your header content is full width on all screens */
+        .site-header {
+            width: 100%;
+        }
+
+        /* Adjustments for the main content containers */
+        .obj-container .obj {
+            margin-bottom: 3rem; /* Add space between collection items */
+        }
+        
+        /* Custom font/color for the header text block */
+        .brand-name-block {
+            background-color: #001F3F; 
+            /* REDUCED THICKNESS: Retained smaller padding for thickness reduction */
+            padding: 10px 0; 
+            margin-bottom: 0; 
+            /* Flex properties removed here, now controlled by .header-content-wrapper */
+            
+        }
+        .brand-name-block h1 {
+            color: #FFFFFF; 
+            font-family: Georgia, serif; 
+            /* Removed text-align: center; as it's now handled by the wrapper */
+            margin: 0; 
+            font-size: 32px; 
+            letter-spacing: 5px;
+        }
+
+        /* Ensure image containers use flex for better alignment in columns if needed */
+        .image-container {
+            display: flex;
+            flex-direction: column; /* Stacks images in a column if multiple are present */
+            gap: 15px; /* Spacing between images in a single column */
+        }
+
+        /* NEW STYLES for Horizontal Header Layout */
+        .header-content-wrapper {
+            background-color: #001F3F;
+            display: flex; /* Enable Flexbox */
+            align-items: center; /* Vertically center items */
+            justify-content: space-between; /* Space logo and name block */
+            padding: 5px 20px; /* Reduced vertical padding and added horizontal padding */
+        }
+        .logo-container {
+            /* Keep logo relatively small and aligned left */
+            padding: 0;
+            line-height: 0; /* Remove extra space below the image */
+        }
+        .logo {
+            max-height: 50px; /* Max height for the logo */
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="container-fluid p-0">
+            
+            <div class="header-content-wrapper">
+                
+                <div class="logo-container">
+                    <img src="Screenshot (772).png" alt="Logo" class="logo">
+                </div>
+                
+                <div class="brand-name-block">
+                    <h1>ARSHITA BAKSHI</h1>
+                </div>
+                
+                <div style="width: 50px;"></div> 
+                
+            </div>
+            
+        </div>
+</header>
+   <div class="luxury-collection-wrapper">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400&display=swap');
+
+        .luxury-collection-wrapper {
+            --navy: #001f3f;
+            --gold: #c5a059;
+            --cream: #fdfbf7;
+            --border: #e8e2d5;
+            
+            padding: 80px 20px;
+            background-color: var(--cream);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .premium-item {
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid var(--border);
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+
+        .premium-item:hover {
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(0,31,63,0.05);
+            transform: translateY(-5px);
+        }
+
+        /* Scarcity Badge */
+        .exclusive-badge {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        /* Image Masking Effect */
+        .img-container {
+            width: 100%;
+            height: 450px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            background: #fff;
+            position: relative;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 1.2s ease;
+        }
+
+        .premium-item:hover .img-container img {
+            transform: scale(1.08);
+        }
+
+        /* Typography */
+        .item-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            color: var(--navy);
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .item-details {
+            transition: all 0.4s ease;
+            opacity: 0.8;
+        }
+
+        .premium-item:hover .item-details {
+            transform: translateY(-10px);
+        }
+
+        .item-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: var(--navy);
+            letter-spacing: 1px;
+        }
+
+        /* Interactive Call to Action */
+        .cta-discover {
+            margin-top: 20px;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--navy);
+            text-decoration: none;
+            padding: 8px 20px;
+            border: 1px solid var(--navy);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .premium-item:hover .cta-discover {
+            opacity: 1;
+            background: var(--navy);
+            color: #fff;
+        }
+
+        /* Sold Out UX */
+        .sold-out {
+            filter: grayscale(0.5);
+            opacity: 0.7;
+        }
+        
+        .sold-out .exclusive-badge {
+            color: var(--navy);
+        }
+
+        @media (max-width: 480px) {
+            .img-container { height: 350px; }
+        }
+    </style>
+    <div class="premium-product-container">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400&display=swap');
+
+        .premium-product-container {
+            --navy: #001f3f;
+            --gold: #c5a059;
+            --cream: #fdfbf7;
+        }
+
+        /* Main Product Card */
+        .product-card {
+            width: 350px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            background: transparent;
+            padding: 20px;
+        }
+
+        .img-box {
+            width: 100%;
+            height: 450px;
+            background: #fff;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: 0.5s;
+        }
+
+        .discover-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 35px;
+            border: 1px solid var(--navy);
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .discover-btn:hover {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        /* Popup Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 31, 63, 0.7); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 1000;
+        }
+
+        /* Sticky Note Style Detail Card */
+        .modal-content {
+            background: var(--cream);
+            width: 90%;
+            max-width: 500px;
+            padding: 50px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border-left: 4px solid var(--gold); 
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--navy);
+        }
+
+        .modal-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            color: var(--navy);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .modal-edition {
+            color: var(--gold);
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .modal-desc {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .price-tag {
+            font-weight: bold;
+            color: var(--navy);
+            font-size: 18px;
+        }
+    </style>
+
+    <div class="product-card">
+        <div class="img-box">
+            <img src="w.jpeg" alt="Product Image">
+        </div>
+        <h2 style="font-family: 'Cormorant Garamond'; font-weight: 400; color: var(--navy);">LE BLEU LIMITED</h2>
+        <div class="discover-btn" onclick="openPopup()">Discover</div>
+    </div>
+
+    <div class="modal-overlay" id="productPopup">
+        <div class="modal-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <span class="modal-edition">Limited Edition</span>
+            <h2 class="modal-title">Navy Gold Edition</h2>
+            <p class="modal-desc">
+                Material: White Velvet yarn<br>
+                Colour: White
+
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="price-tag">Price on request</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('productPopup').classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closePopup() {
+            document.getElementById('productPopup').classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById('productPopup');
+            if (event.target == modal) {
+                closePopup();
+            }
+        }
+    </script>
+</div> 
+<div class="product-card">
+        <div class="img-box">
+            <img src="bow.jpeg" alt="Product Image">
+        </div>
+        <h2 style="font-family: 'Cormorant Garamond'; font-weight: 400; color: var(--navy);">LE BLEU LIMITED</h2>
+        <div class="discover-btn" onclick="openPopup()">Discover</div>
+    </div>
+
+    <div class="modal-overlay" id="productPopup">
+        <div class="modal-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <span class="modal-edition">Limited Edition</span>
+            <h2 class="modal-title">Navy Gold Edition</h2>
+            <p class="modal-desc">
+                Material: White Velvet yarn<br>
+                Colour: White, golden
+
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="price-tag">Price on request</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('productPopup').classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closePopup() {
+            document.getElementById('productPopup').classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById('productPopup');
+            if (event.target == modal) {
+                closePopup();
+            }
+        }
+    </script>
+</div> 
+</body>
+</html>
